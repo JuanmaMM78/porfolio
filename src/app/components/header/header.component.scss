@@ -1,19 +1,68 @@
 @import "variables";
 
 .nav {
+    background-color: black;
     display: flex;
     padding: 1rem;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
     gap: 1rem;
 
     a {
+        color: $text1;
         padding: 1rem;
-        
-
     }
 
-    .active {
-        border: 1px solid red;
-    }
+    // .active {
+    //     border: 1px solid red;
+    // }
+}
+body {
+  min-height: auto;
+//   border: 1px solid red;
+}
+
+.image {
+    max-width: 90%;
+    width: 75%;
+    height: 100%;
+    display: block;
+    // border: 1px solid red;
+    box-shadow: 
+     -30px -40px 40px $text1 ;
+ 
+    border-radius: 0px 0px 99999px 0px;
+}
+p {
+    // border: 1px solid red;
+    position: absolute;
+   
+    right: auto;
+    top: 100px;
+    padding: 40px 0px 40px 40px;
+    font-size: 5em;
+    color: $text2;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: auto;
+    
+    animation: 
+    typing 4s infinite alternate steps(13),
+    blink .4s infinite step-end alternate ;
+    overflow: hidden;
+   
+}
+
+@keyframes typing {
+    from { width: 0% }
+    25%{width: 20%}
+    50%{width: 35%}
+    75%{width: 35%}
+    to{width: 35%;}
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
 }
