@@ -1,0 +1,19 @@
+@import "variables";
+
+.nav {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    a {
+        padding: 1rem;
+        
+
+    }
+
+    .active {
+        border: 1px solid red;
+    }
+}
