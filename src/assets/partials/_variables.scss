@@ -1,0 +1,49 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=JetBrains+Mono:wght@700&family=Poppins:ital,wght@0,400;0,700;1,400&display=swap");
+
+// Variables
+
+$colorMain: #1c1c1c;
+$colorSecondary: #222831;
+$colorThird: #43add2;
+$colorSpecial: #180d2a;
+$colorButtons: #931b4d;
+$textColorSpan: #582a58;
+$textColor: #9399a5;
+
+$black: #000000;
+$white: #fefefe;
+$gray: #9ba2ae;
+
+$bodyFont: "Poppins", sans-serif;
+$titleFont: "Heebo", sans-serif;
+$subtitle: "JetBrains Mono", monospace;
+
+$fontSize: 1em;
+$marginGrid: 0.625em;
+
+$breakpointTablet: 768px;
+$breakpointDesktop: 1140px;
+$container: 1200px;
+
+// Responsive
+$breakPoints: (
+  xs: 480px,
+  xs5: 500px,
+  tablet: 768px,
+  laptop: 769px,
+  desktop: 1024px,
+  tv: 1201px,
+);
+
+@mixin mobileFirst($breakPoint) {
+  @media screen and (min-width: map-get($breakPoints, $breakPoint)) {
+    @content;
+  }
+}
+
+@mixin underSize($breakPoint) {
+  @media screen and (max-width: map-get($breakPoints, $breakPoint)) {
+    @content;
+  }
+}

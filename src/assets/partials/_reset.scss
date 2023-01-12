@@ -1,0 +1,116 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    user-select: none;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-size: 100%;
+    font-family: $bodyFont;
+    background-color: $colorMain;
+    line-height: 1.4em;
+  }
+  
+  img,
+  picture,
+  video,
+  iframe,
+  figure {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  a {
+    display: block;
+    text-decoration: none;
+    color: $colorMain;
+    font-weight: bold;
+  }
+  
+  p a {
+    display: inline;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  ::selection {
+    background-color: $colorMain;
+    color: $white;
+  }
+  
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    font-family: $titleFont;
+    font-weight: 800;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    background: $colorSecondary;
+    border: 1px solid $black;
+    color: $white;
+  
+    @include mobileFirst(Laptop) {
+      &:hover {
+        background-color: $colorButtons;
+      }
+    }
+  }
+  
+  .btnNeo {
+    background: transparent;
+    font-weight: bold;
+    color: #444;
+    font-size: 1rem;
+    border: 2px solid #eee;
+    border-radius: 0.5rem;
+    transition: all 1s ease;
+    cursor: pointer;
+    box-shadow: 0.5rem 0.5rem 1rem #ccc, -0.5rem -0.5rem 1rem #fff;
+  
+    &:hover {
+      box-shadow: 0.5rem 0.5rem 1rem #fff, -0.5rem -0.5rem 1rem #ccc;
+    }
+  
+    &:active {
+      box-shadow: inset 0.2rem 0.2rem 0.5rem #fff,
+        inset -0.2rem -0.2rem 0.5rem #ccc;
+    }
+  }
+  
+  .container {
+    width: 90%;
+    max-width: $container;
+    margin: auto;
+  }
