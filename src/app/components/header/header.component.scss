@@ -19,6 +19,8 @@
 }
 body {
   min-height: auto;
+  display: flex;
+    
 //   border: 1px solid red;
 }
 
@@ -53,6 +55,18 @@ p {
     blink .4s infinite step-end alternate ;
     overflow: hidden;
    
+    // @include mobileFirst(laptop) {
+    //     // border: 1px solid red;
+    //     font-size: 2em;
+    //     border-right: 2px solid;
+    //     padding: 20px 0px 20px 20px;
+
+    //     animation: 
+    //     typing 4s infinite alternate steps(13),
+    //     blink .4s infinite step-end alternate ;
+    // }
+    
+
 }
 
 @keyframes typing {
@@ -65,4 +79,21 @@ p {
 
 @keyframes blink {
     50% { border-color: transparent }
+}
+
+.icons {
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.icon {
+ 
+    width: 150px;
+    padding: 130px 60px 0px 0px;
 }
