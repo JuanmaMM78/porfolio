@@ -12,9 +12,9 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        box-shadow: inset 0px 5px 10px 20px $black;
 
         @include mobileFirst(laptop) {
-        //   border: 1px solid red;
           font-size: 2em;
           border-right: 2px solid;
       }
@@ -30,10 +30,16 @@
         height: 100px;
 
         .icon {    
-            // padding: 1rem;
             max-width: 50px;
             max-height: 50px;
 
+            &:hover {
+              transform: scale(0.9);
+            }
+            
+            &:active {
+              transform: scale(0.9);
+            }
 
             @include mobileFirst(xs) {  
               padding: 1rem;
@@ -66,13 +72,9 @@
       padding: 5px 0px 5px 20px;
       font-size: 2rem;
       color: $light;
-      // display: block;
       font-family: monospace;
       white-space: nowrap;
       border-right: 0.2rem solid;
-      // border: 1px solid red;
-
-      
       
       animation: 
       typing 7s infinite alternate steps(16),
@@ -93,7 +95,6 @@
       }
      
       @include mobileFirst(xs5) {
-          // border: 1px solid red;
           font-size: 3rem;
           border-right: 0.3rem solid;
           padding: 10px 0px 10px 20px;
@@ -118,7 +119,6 @@
       }
 
       @include mobileFirst(tablet) {
-        // border: 1px solid red;
         font-size: 4rem;
         border-right: 0.4rem solid;
         padding: 15px 0px 15px 20px;

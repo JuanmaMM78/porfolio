@@ -1,19 +1,19 @@
 <section class="header">
     <nav class="header__nav">
-        <a  [routerLink]="['home']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/home-button.svg" alt="burger_menu"></a>
+        <a  [routerLink]="['home']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/home.svg" alt="home_button"></a>
         <a [routerLink]="['proyects']" routerLinkActive="active"  (click)="audio.play()">Projects</a>
         <a [routerLink]="['tecnologies']" routerLinkActive="active"  (click)="audio.play()">Technology</a>
-        <a [routerLink]="['contact']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/contact.svg" alt="burger_menu"></a>       
+        <a [routerLink]="['contact']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/contacto-mail.svg" alt="contact_button"></a>       
     </nav>
     <div (click)="changeSwitch()" (click)="audio.play()" class="header__btn">
-        <img src="../../../assets/images/icon (1).svg" alt="burger_menu">
+        <img src="../../../assets/images/icon (1).svg" alt="menu_button">
     </div>
 </section>
 <div class="nav2" [ngClass]="{ move: switch }">
     <nav class="nav2__menu">
-        <a (click)="changeSwitch()" [routerLink]="['home']" routerLinkActive="active">Home</a>
+        <a (click)="changeSwitch()" [routerLink]="['home']" routerLinkActive="active"><img src="../../../assets/animation/homeBtn.gif" alt="home_button"></a>
         <a (click)="changeSwitch()" [routerLink]="['proyects']" routerLinkActive="active">Projects</a>
         <a (click)="changeSwitch()" [routerLink]="['tecnologies']" routerLinkActive="active">Technology</a>
-        <a (click)="changeSwitch()" [routerLink]="['contact']" routerLinkActive="active">Contact</a>       
+        <a (click)="changeSwitch()" [routerLink]="['contact']" routerLinkActive="active"><img src="../../../assets/animation/contactBtn.gif" alt="contact_button"></a>       
     </nav>
 </div>

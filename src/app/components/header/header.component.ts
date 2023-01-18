@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   switch: boolean = false;
-  audio: any = new Audio('/assets/sound/off-click.mp3');
+  audio: any = new Audio('/assets/sound/clic.mp3');
 
   constructor() { }
 
