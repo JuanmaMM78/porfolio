@@ -1,36 +1,19 @@
-<nav class="nav">
-    <a [routerLink]="['home']" routerLinkActive="active">Início</a>
-    <a [routerLink]="['proyects']" routerLinkActive="active">Proyectos</a>
-    <a [routerLink]="['tecnologies']" routerLinkActive="active">Tecnologías</a>
-    <a [routerLink]="['contact']" routerLinkActive="active">Contacto</a>
-</nav>
-<body>
-    <img  class="image" src="../../../assets/images/68095.jpg" alt="keyboard">
-    <p>Hello World!!</p>
-    <div class="icons">
-        <div class="block block1">
-            <img class="icon" src="../../../assets/images/angular.png" alt="">
-            <img class="icon" src="../../../assets/images/bootstrap.png" alt="">
-        </div>
-        <div class="block block2">
-            <img class="icon" src="../../../assets/images/css-alt.png" alt="">
-            <img class="icon" src="../../../assets/images/git (1).png" alt="">
-            <img class="icon" src="../../../assets/images/html.png" alt="">
-        </div>
-        <div class="block block3">
-            <img class="icon" src="../../../assets/images/javascript.png" alt="">
-            <img class="icon" src="../../../assets/images/microsoft-dotnet.png" alt="">
-            <img class="icon" src="../../../assets/images/mongodb.png" alt="">
-            <img class="icon" src="../../../assets/images/mysql.png" alt="">
-        </div>
-        <div class="block block4">
-            <img class="icon" src="../../../assets/images/nodejs.png" alt="">
-            <img class="icon" src="../../../assets/images/typescript (1).png" alt="">
-            <img class="icon" src="../../../assets/images/visualstudio (1).png" alt="">
-            <img class="icon" src="../../../assets/images/visual-studio-code.png" alt="">
-            <img class="icon" src="../../../assets/images/wordpress (1).png" alt="">
-        </div>
+<section class="header">
+    <nav class="header__nav">
+        <a  [routerLink]="['home']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/home-button.svg" alt="burger_menu"></a>
+        <a [routerLink]="['proyects']" routerLinkActive="active"  (click)="audio.play()">Projects</a>
+        <a [routerLink]="['tecnologies']" routerLinkActive="active"  (click)="audio.play()">Technology</a>
+        <a [routerLink]="['contact']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/contact.svg" alt="burger_menu"></a>       
+    </nav>
+    <div (click)="changeSwitch()" (click)="audio.play()" class="header__btn">
+        <img src="../../../assets/images/icon (1).svg" alt="burger_menu">
     </div>
-  
-    
-</body>
+</section>
+<div class="nav2" [ngClass]="{ move: switch }">
+    <nav class="nav2__menu">
+        <a (click)="changeSwitch()" [routerLink]="['home']" routerLinkActive="active">Home</a>
+        <a (click)="changeSwitch()" [routerLink]="['proyects']" routerLinkActive="active">Projects</a>
+        <a (click)="changeSwitch()" [routerLink]="['tecnologies']" routerLinkActive="active">Technology</a>
+        <a (click)="changeSwitch()" [routerLink]="['contact']" routerLinkActive="active">Contact</a>       
+    </nav>
+</div>

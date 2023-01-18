@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  switch: boolean = false;
+  audio: any = new Audio('/assets/sound/off-click.mp3');
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  changeSwitch(): void{
+    this.switch = !this.switch
+  }
+
+  play(): void{
+    this.audio.play();
+  }
+
 
 }

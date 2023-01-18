@@ -1,0 +1,148 @@
+@import "variables";
+
+.main {
+    min-height: 100vh;
+    display: block;
+  
+    &__hero {
+        color: $light;
+        height: 600px;
+        display: flex;
+        background-image: url("/assets/images/68095.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @include mobileFirst(laptop) {
+        //   border: 1px solid red;
+          font-size: 2em;
+          border-right: 2px solid;
+      }
+
+    }
+
+    &__rrss {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        height: 100px;
+
+        .icon {    
+            // padding: 1rem;
+            max-width: 50px;
+            max-height: 50px;
+
+
+            @include mobileFirst(xs) {  
+              padding: 1rem;
+              max-width: 100px;
+              max-height: 100px;
+            }
+            
+            @include mobileFirst(laptop) {  
+            padding: 1rem;
+            max-width: 120px;
+            max-height: 120px;
+            } 
+        }
+
+        @include mobileFirst(xs) {
+          height: 150px;
+        }
+
+        @include mobileFirst(laptop) {
+          height: 200px;
+        }
+    }
+}
+  
+
+  h1 {
+      position: absolute;   
+      right: auto;
+      top: 100px;
+      padding: 5px 0px 5px 20px;
+      font-size: 2rem;
+      color: $light;
+      // display: block;
+      font-family: monospace;
+      white-space: nowrap;
+      border-right: 0.2rem solid;
+      // border: 1px solid red;
+
+      
+      
+      animation: 
+      typing 7s infinite alternate steps(16),
+      typing2 7s infinite alternate steps(16),
+      blink .4s infinite step-end alternate ;
+      overflow: hidden;
+
+      @keyframes typing {
+        from { width: 0 }
+        50%{width: 130px}
+        to{width: 260px}
+      }
+
+      @keyframes typing2{
+        from { width: 260px }
+        75%{width: 260px}
+        to{width: 0px}
+      }
+     
+      @include mobileFirst(xs5) {
+          // border: 1px solid red;
+          font-size: 3rem;
+          border-right: 0.3rem solid;
+          padding: 10px 0px 10px 20px;
+  
+          animation: 
+          typing 7s infinite alternate steps(16),
+          typing2 7s infinite alternate steps(16),
+          blink .4s infinite step-end alternate ;
+
+          @keyframes typing {
+            from { width: 0 }
+            50%{width: 160px}
+            to{width: 380px}
+          }
+  
+          @keyframes typing2{
+            from { width: 380px }
+            75%{width: 380px}
+            to{width: 0px}
+          }
+          
+      }
+
+      @include mobileFirst(tablet) {
+        // border: 1px solid red;
+        font-size: 4rem;
+        border-right: 0.4rem solid;
+        padding: 15px 0px 15px 20px;
+
+        animation: 
+        typing 7s infinite alternate steps(16),
+        typing2 7s infinite alternate steps(16),
+        blink .4s infinite step-end alternate ;
+
+        @keyframes typing {
+          from { width: 0 }
+          50%{width: 250px}
+          to{width: 500px}
+        }
+
+        @keyframes typing2{
+          from { width: 500px }
+          75%{width: 500px}
+          to{width: 0px}
+        }
+        
+    }
+  }
+  
+  @keyframes blink {
+      50% { border-color: transparent }
+  }
