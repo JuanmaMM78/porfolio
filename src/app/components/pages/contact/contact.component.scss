@@ -1,0 +1,178 @@
+@import "variables";
+
+.main {
+    min-height: 100vh;
+    display: block;
+    background: linear-gradient(to bottom, $black, $lightBtn);
+    color: $light;
+
+    &__title {
+        justify-content: center;
+        color: $light;
+        margin-left: 1rem;
+
+        @include mobileFirst(xs5){
+            justify-content: start;
+            margin-top: 20px;
+            margin-left: 1.5rem;
+            font-size: 30px;
+        }
+    }
+
+    &__email {
+ 
+        h2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            font-size: 1rem;
+            color: $light;
+
+            @include mobileFirst(xs5){
+                font-size: 1.5rem;
+            }
+        }     
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .contact__form{
+            margin-top: 0.5rem;
+            gap: 2rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid $lightBtn;
+            transition: 1s;
+
+          
+            input {
+                font-family: $titleFont;  
+                font-size: 1rem;
+                padding: 1rem;
+                max-width: 200px;
+                // margin-bottom: 2rem;
+            }
+    
+            #comment {  
+                font-size: 1rem;   
+                font-family: $titleFont;  
+                max-width: 200px;
+                min-height: 200px;
+                padding: 1rem;
+            }
+
+            @include mobileFirst(xs5){
+                margin-top: 0.5rem;
+            }
+        }
+  
+        p {
+            display: flex;
+            justify-content: center;
+            font-family: $titleFont; 
+        }       
+
+        .btn_send {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            width: 80px;
+            height: 53px;
+            padding: 1.2rem;
+            color: $lightBtn;
+            box-shadow: -1px 1px 4px $light, 3px 4px 7px $principal;
+            border-radius: 5px 5px;
+            background-image: url("/assets/images/tecla2.png");
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+            margin-top: 2rem;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+    
+            &:active {
+                transform: scale(0.9);
+                box-shadow: 1px 2px 6px $light;
+            }
+
+            img { 
+                width: 30px;
+                height: 25px;
+            } 
+        }    
+    }
+
+    &__datos{
+        margin-top: 2rem;
+
+        p {
+            display: flex;
+            justify-content: center;
+            font-family: $titleFont; 
+
+            @include mobileFirst(xs5){
+                font-size: 1.5rem;
+                padding: 0.5rem;
+            }
+        }
+    }
+    
+    &__send {
+        display: none;    
+    }
+
+    &__text {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.move {
+    transform: rotateY(450deg);
+}
+
+.none {
+    display: none;
+}
+
+.send {
+    display: block;
+    color: $light;
+    font-size: 1rem;
+    padding: 31.2px;
+
+    span {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+    @include mobileFirst(xs5){
+        font-size: 1.5rem;
+        padding: 31.2px;
+    }
+}
+
+
+.text-danger-name {
+    position: relative;
+    top: -405px;
+    font-size: 15px;
+    color: red;
+
+    @include mobileFirst(xs5){
+        top: -437px;
+    }
+}
+
+
+

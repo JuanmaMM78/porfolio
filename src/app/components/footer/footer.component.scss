@@ -10,6 +10,18 @@
     align-items: center;
     justify-content:flex-start;
 
+    img {
+      width: 15px;
+      height: 10px;
+      margin-left: 5px;
+
+      @include mobileFirst(xs) {  
+        width: 25px;
+        height: 20px;
+       }
+
+    }
+
     @include mobileFirst(xs) {  
        font-size: 15px;
        padding: 0.5rem;

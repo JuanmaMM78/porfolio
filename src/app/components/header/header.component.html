@@ -1,8 +1,8 @@
 <section class="header">
     <nav class="header__nav">
         <a  [routerLink]="['home']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/home.svg" alt="home_button"></a>
-        <a [routerLink]="['proyects']" routerLinkActive="active"  (click)="audio.play()">Projects</a>
-        <a [routerLink]="['tecnologies']" routerLinkActive="active"  (click)="audio.play()">Technology</a>
+        <a [routerLink]="['projects']" routerLinkActive="active"  (click)="audio.play()">Projects</a>
+        <a [routerLink]="['technologies']" routerLinkActive="active"  (click)="audio.play()">Technology</a>
         <a [routerLink]="['contact']" routerLinkActive="active"  (click)="audio.play()"><img src="../../../assets/images/contacto-mail.svg" alt="contact_button"></a>       
     </nav>
     <div (click)="changeSwitch()" (click)="audio.play()" class="header__btn">
@@ -12,8 +12,8 @@
 <div class="nav2" [ngClass]="{ move: switch }">
     <nav class="nav2__menu">
         <a (click)="changeSwitch()" [routerLink]="['home']" routerLinkActive="active"><img src="../../../assets/animation/homeBtn.gif" alt="home_button"></a>
-        <a (click)="changeSwitch()" [routerLink]="['proyects']" routerLinkActive="active">Projects</a>
-        <a (click)="changeSwitch()" [routerLink]="['tecnologies']" routerLinkActive="active">Technology</a>
+        <a (click)="changeSwitch()" [routerLink]="['projects']" routerLinkActive="active">Projects</a>
+        <a (click)="changeSwitch()" [routerLink]="['technologies']" routerLinkActive="active">Technology</a>
         <a (click)="changeSwitch()" [routerLink]="['contact']" routerLinkActive="active"><img src="../../../assets/animation/contactBtn.gif" alt="contact_button"></a>       
     </nav>
 </div>

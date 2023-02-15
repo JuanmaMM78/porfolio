@@ -1,1 +1,35 @@
+<div class="main">
+    <section class="main__title">
+        <h1>Contact</h1>
+    </section>    
+    <section class="main__form">
+        <div class="main__email" [ngClass]="{ move: switchMove }">
+            <h2>Send Email</h2>
+        </div>
+        <form novalidate [formGroup]="formModel">
+            <div class="contact__form" [ngClass]="{ move: switchMove }">
+                <input formControlName="name" type="text" id="name" placeholder="Name*"/>
+               
+                 <input formControlName="contact" type="email" id="contact" placeholder="Email Contact*"/>
+               <textarea formControlName="comment" id="comment" placeholder="Comment"></textarea>
+            </div>
+        </form>
+        <div [ngClass]="{ none: switchNone }">
+            <button [disabled]="!formModel.valid" class="btn_send" type="submit" (click)="changeSwitch(); audio.play(); modal()"><img src="../../../../assets/images/send.png"alt="img_send"></button>
+        </div>
+    </section>
+    <section class="main__send" [ngClass]="{ send: switchSend }">
+        <span>Sending...Thank you!!</span>
+    </section>
+    <section class="main__datos">
+        <p>jumarlinares@gmail.com</p>
+        <p>Tlf. +34 615317729</p>
+    </section>
+    <section class="main__text">
+        <p class="text-danger-name" *ngIf="checkControl('name', 'required') || checkControl('contact', 'required')">
+            Required*</p>
+    </section>
+    
+   
+</div>
 

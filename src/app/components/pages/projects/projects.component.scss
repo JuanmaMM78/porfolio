@@ -1,0 +1,119 @@
+@import "variables";
+
+.main {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, $black, $lightBtn);
+    color: $light;
+    
+    &__title{
+        color: $light;  
+        margin-left: 1rem;
+
+        @include mobileFirst(xs5){
+            justify-content: start;
+            margin-top: 20px;
+            margin-left: 1.5rem;
+            font-size: 30px;
+        }  
+    }
+    
+    &__projects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $black;
+        box-shadow: -1px -1px 5px $lightBtn;
+        border: 1px solid $lightBtn;
+        margin: auto;
+        margin-top: 2rem;
+        border-radius: 20px;
+        max-width: 90%;
+        max-height: 30%;
+
+        @include mobileFirst(xs5) {
+            max-width: 434px;
+            max-height: 452px;
+        }
+
+       .capture {
+        height: 40%;
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        margin-bottom: 0.5rem;
+    
+        @include mobileFirst(xs5) {
+            margin-bottom: 1rem;
+        }
+       }
+
+       h2, h3 {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+        align-items: center;
+        gap: 0.2rem;
+       }
+
+       h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+
+        @include mobileFirst(xs5) {
+            font-size: 1.7rem;
+            margin-bottom: 0.7rem;
+        }
+  
+        }
+       h3 {
+        color: $textColor;
+        font-size: 0.7rem;
+        margin-bottom: 0.7rem;
+
+        @include mobileFirst(xs5) {
+            font-size: 1rem;
+            margin-bottom: 0.7rem;
+        }
+
+        }
+
+       .icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.4rem;
+        margin-bottom: 0.7rem;
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 40px;
+            padding: 1.2rem;
+            color: $lightBtn;
+            box-shadow: -1px 1px 4px $light, 3px 4px 7px $principal;
+            border-radius: 5px 5px;
+            background-image: url("/assets/images/tecla2.png");
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+
+            &:hover {
+                transform: scale(0.95);
+            }
+    
+            &:active {
+                transform: scale(0.9);
+                box-shadow: 1px 2px 6px $light;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+                
+            }
+        }
+       
+       }
+    }
+}

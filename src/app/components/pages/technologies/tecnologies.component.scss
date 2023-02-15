@@ -1,0 +1,68 @@
+@import "variables";
+
+.main {
+    min-height: 100vh;
+    display: block;
+    background: linear-gradient(to bottom, $black, $lightBtn);
+    color: $light;
+
+    &__hero {
+        justify-content: center;
+        color: $light;
+        margin-left: 1rem;
+
+        @include mobileFirst(xs5){
+            justify-content: start;
+            margin-top: 20px;
+            margin-left: 1.5rem;
+            font-size: 30px;
+        }
+    }
+
+    &__tools {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.5rem;
+        margin-top: 100px;
+        transition: 1s;
+        
+        @include mobileFirst(xs5){
+         gap: 2.5rem;  
+        }
+
+        @include mobileFirst(laptop){
+            gap: 4rem;  
+           }
+
+        img {
+            max-height: 60px;
+            max-width: 60px;
+            padding: 0.5rem;
+            margin-bottom: 50px;
+           
+            @include mobileFirst(xs5){
+                max-height: 80px;
+                max-width: 80px;
+                padding: 0.5rem;
+                margin-bottom: 50px;
+               
+            }
+
+            @include mobileFirst(laptop){
+                max-height: 100px;
+                max-width: 100px;
+                padding: 0.5rem;
+                margin-bottom: 50px;
+            }
+
+        }
+
+        &__icons {
+            gap: 1rem;
+        }
+    }
+   
+  
+}

@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { TecnologiesComponent } from './components/pages/tecnologies/tecnologies.component';
-import { ProyectsComponent } from './components/pages/proyects/proyects.component';
+import { TecnologiesComponent } from './components/pages/technologies/tecnologies.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ProjectsComponent } from './components/pages/projects/projects.component';
+
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { ContactComponent } from './components/pages/contact/contact.component';
     FooterComponent,
     HomeComponent,
     TecnologiesComponent,
-    ProyectsComponent,
-    ContactComponent
+    ContactComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
